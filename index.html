@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Helidan</title>
+
+    <link rel="shortcut icon" href="imgs/icon.png" />
+
+    <!-- Links CSS -->
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/loader.css">
+
+    <!-- Links Js -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/loader.js"></script>
+
+
+  </head>
+  <body>
+    <div id="preloader">
+      <div id="loader"></div>
+    </div>
+    <section class="sec">
+      <header>
+        <a href="#"><img src="imgs/logo.png" class="logo" /></a>
+        <div class="toggleMenu" onclick="menuToggle();"></div>
+        <ul class="navigation">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="producto.html">Productos</a></li>
+          <li><a href="#">Lo nuevo</a></li>
+          <li><a href="#">Información</a></li>
+          <li><a href="#">Contactos</a></li>
+        </ul>
+      </header>
+      <div class="content">
+        <div class="textBox">
+          <h2>Refresh-cante<br /><span>Helidan</span></h2>
+          <p>
+            D'angelo, Hector y Brandoli los mejores haciendo Websites y Designs.
+            Esta vez le ofrecemos este producto llamado Pepsi que le dará
+            frescura a tu garganta y un sabor muy nuevo para tu lengua y
+            recordar los mejores momentos de tu vida.
+          </p>
+          <a href="producto.html">Ver todos los productos</a>
+        </div>
+        <div class="imgBox">
+          <img src="imgs/pepsi001.png" class="pepsi" />
+        </div>
+      </div>
+      <ul class="thumb">
+        <li>
+          <img
+            src="imgs/pepsi001.png"
+            onclick="imgSlider('imgs/pepsi001.png');ChangeBgColor('#0062be')"
+          />
+        </li>
+        <li>
+          <img
+            src="imgs/pepsi002.png"
+            onclick="imgSlider('imgs/pepsi002.png');ChangeBgColor('#e60c2c')"
+          />
+        </li>
+        <li>
+          <img
+            src="imgs/pepsi003.png"
+            onclick="imgSlider('imgs/pepsi003.png');ChangeBgColor('#1e1e1e')"
+          />
+        </li>
+      </ul>
+      <ul class="sci">
+        <li>
+          <a href="#"><img src="imgs/facebook.png" /></a>
+        </li>
+        <li>
+          <a href="#"><img src="imgs/instagram.png" /></a>
+        </li>
+        <li>
+          <a href="#"><img src="imgs/twitter.png" /></a>
+        </li>
+      </ul>
+    </section>
+    
+    <footer id="right" class="copy">
+      <p id="copyright">Copyright © 2021 Helidan. All rights reserved</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script type="text/javascript">
+      function imgSlider(anything) {
+        document.querySelector(".pepsi").src = anything;
+      }
+      function ChangeBgColor(color) {
+        const sec = document.querySelector(".sec");
+        sec.style.background = color;
+      }
+
+      function menuToggle() {
+        const toggleMenu = document.querySelector(".toggleMenu");
+        const navigation = document.querySelector(".navigation");
+        toggleMenu.classList.toggle("active");
+        navigation.classList.toggle("active");
+      }
+    </script>
+  </body>
+</html>
